@@ -44,17 +44,17 @@ login-register/
 │    │   └── servlet/
 │    │       ├── Login.java
 │    │       └── RegisterUser.java
-│    ├── webapp/
-│    │   ├── WEB-INF
-│    │   │   ├── jsp
-│    │   │   │    ├── mypage.jsp
-│    │   │   │    ├── registerConfirm.jsp
-│    │   │   │    ├── registerDone.jsp
-│    │   │   │    └── registerForm.jsp
-│    │   │   └── lib
-│    │   │        └── h2-2.3.232.jar
-│    │   ├── css/style.css
-│    │   └── index.jsp
+│    └── webapp/
+│        ├── WEB-INF
+│        │   ├── jsp
+│        │   │    ├── mypage.jsp
+│        │   │    ├── registerConfirm.jsp
+│        │   │    ├── registerDone.jsp
+│        │   │    └── registerForm.jsp
+│        │   └── lib
+│        │        └── h2-2.3.232.jar
+│        ├── css/style.css
+│        └── index.jsp
 └── README.md
 ```
 
@@ -66,14 +66,21 @@ login-register/
 > 例：  
 > ![ER図](./docs/er_diagram.png)
 
-### テーブル定義例：users
-| カラム名 | 型 | 説明 |
-|-----------|----|------|
-| id | INT | 主キー（AUTO_INCREMENT） |
-| name | VARCHAR(50) | ユーザー名 |
-| email | VARCHAR(100) | メールアドレス |
-| password | VARCHAR(255) | ハッシュ化されたパスワード |
-| created_at | DATETIME | 登録日時 |
+### テーブル定義例：ec_users
+| カラム名       | 型            | 説明                   
+--------------------------------------------------------
+| id            | INT           | 主キー(AUTO_INCREMENT) 
+| name_sei      | VARCHAR(50)   | 姓                     
+| name_mei      | VARCHAR(50)   | 名                     
+| name_sei_kana | VARCHAR(50)   | 姓(カナ)               
+| name_mei_kana | VARCHAR(50)   | 名(カナ)               
+| gender        | VARCHAR(10)   | 性別 
+| email         | VARCHAR(100)  | メールアドレス 
+| mobile        | VARCHAR(20)   | 電話番号 
+| post          | VARCHAR(10)   | 郵便番号 
+| pref          | VARCHAR(20)   | 都道府県 
+| address       | VARCHAR(200)  | 住所 
+| password      | VARCHAR(255)  | パスワード 
 
 ---
 
