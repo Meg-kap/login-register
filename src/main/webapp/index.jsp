@@ -1,32 +1,43 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>ログイン</title>
+    <meta charset="UTF-8">
+    <title>ログイン</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
+
 <body>
-<h2>ログイン</h2>
-<form action="Login" method="post">
-  ログインID：<input type="text" name="id"><br>
-  パスワード：<input type="password" name="pass"><br>
-  <input type="submit" value="ログイン">
-</form>
-<% String errorMsg = (String) request.getAttribute("errorMsg"); %>
-<% if (errorMsg != null) { %>
-  <p style="color:red;"><%= errorMsg %></p>
-<% } %>
 
+<div class="form-container">
+	<h1 class="form-title">ログイン</h1>
+	<form action="Login" method="post" class="form-wrap">
+		<div class="form-row">
+			<label for="id">ログインID</label>
+			 <input type="text" id="id" name="id" required>
+		</div>
 
-<hr>
+		<div class="form-row">
+			<label for="pass">パスワード</label>
+			<input type="password" id="pass" name="pass" required>
+		</div>
 
-<h3>新規登録はこちら</h3>
-<a href="RegisterUser">新規登録</a>
-<!-- またはボタン形式 -->
-<!--
-<form action="RegisterUser" method="get">
-  <input type="submit" value="新規登録">
-</form>
--->
+		<div class="form-actions">
+			<input type="submit" value="ログイン" class="btn-primary">
+		</div>
+
+	</form>
+
+	<% if (request.getAttribute("errorMsg") != null) { %>
+	<p class="error-msg"><%= request.getAttribute("errorMsg") %></p>
+	<% } %>
+
+	<div class="additional-links">
+		<p>アカウントをお持ちでない方はこちら👇</p>
+		<a href="RegisterUser" class="btn-secondary">新規登録</a>
+	</div>
+
+</div>
+
 </body>
 </html>

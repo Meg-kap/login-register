@@ -18,7 +18,7 @@ public class LoginLogic {
 
             conn = DriverManager.getConnection(url, userName, password);
 
-            String sql = "SELECT * FROM ecusers WHERE EMAIL = ? AND PASSWORD = ?";
+            String sql = "SELECT * FROM ec_users WHERE EMAIL = ? AND PASSWORD = ?";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, email);
             pstmt.setString(2, pass);

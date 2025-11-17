@@ -1,9 +1,9 @@
-@charset "UTF-8";
-
+/* 全体のベース */
 body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
   padding: 20px;
+  margin: 0;
 }
 
 h1 {
@@ -11,6 +11,7 @@ h1 {
   text-align: center;
 }
 
+/* フォーム共通 */
 form {
   background-color: #fff;
   max-width: 500px;
@@ -20,11 +21,11 @@ form {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Flex行の間隔を gap で統一 */
+/* フォーム行の横並び */
 .form-row {
   display: flex;
   align-items: center;
-  gap: 10px; /* ここで input と input、label と input の間隔を調整 */
+  gap: 10px; /* ラベルと入力欄の間隔 */
   margin-bottom: 15px;
 }
 
@@ -45,21 +46,107 @@ form {
   font-family: sans-serif;
 }
 
+/* 確認ページカード */
+.confirm-card {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 確認ページのラベルと値 */
+.confirm-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.confirm-row .label {
+  width: 120px;
+  font-weight: bold;
+}
+
+.confirm-row .value {
+  flex: 1;
+}
+
+/* ボタン共通 */
 .form-actions {
   text-align: center;
   margin-top: 20px;
 }
 
-.form-actions input {
+.form-actions input,
+.form-actions a.btn {
+  display: inline-block;
   padding: 10px 20px;
-  background-color: #0077cc;
-  border: none;
-  color: #fff;
+  text-decoration: none;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
+  margin-right: 10px;
+}
+
+/* フォーム送信用ボタン */
+.form-actions input {
+  background-color: #0077cc;
+  border: none;
+  color: #fff;
 }
 
 .form-actions input:hover {
   background-color: #005fa3;
+}
+
+/* 確認ページボタン（戻る用） */
+.form-actions a.btn {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.form-actions a.btn:hover {
+  background-color: #999;
+}
+
+/* 確認ページ登録用ボタン */
+.form-actions a.btn-submit {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+.form-actions a.btn-submit:hover {
+  background-color: #005fa3;
+}
+
+/* エラーメッセージ */
+.error-msg {
+  color: #e63946;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* 追加リンクスタイル */
+.additional-links {
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form-row label {
+    width: auto;
+    margin-bottom: 5px;
+  }
+  .form-actions input,
+  .form-actions a.btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }

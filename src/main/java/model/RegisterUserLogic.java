@@ -16,7 +16,7 @@ public class RegisterUserLogic {
 
             conn = DriverManager.getConnection(url, userName, password);
 
-            String sql = "INSERT INTO ecusers (" 
+            String sql = "INSERT INTO ec_users (" 
                     + "NAME_SEI, NAME_MEI, NAME_SEI_KANA, NAME_MEI_KANA, "
                     + "GENDER, EMAIL, MOBILE, POST, PREF, ADDRESS, PASSWORD"
                     + ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
