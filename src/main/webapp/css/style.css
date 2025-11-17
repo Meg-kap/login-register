@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+form {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Flex行の間隔を gap で統一 */
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ここで input と input、label と input の間隔を調整 */
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  width: 120px;
+  font-weight: bold;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-row input[type="password"] {
+  font-family: sans-serif;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-actions input {
+  padding: 10px 20px;
+  background-color: #0077cc;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-actions input:hover {
+  background-color: #005fa3;
+}
