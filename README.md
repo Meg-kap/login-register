@@ -67,20 +67,20 @@ login-register/
 > ![ER図](./docs/er_diagram.png)
 
 ### テーブル定義例：ec_users
-| カラム名       | 型            | 説明                   
+|　カラム名      　| 型           　| 説明　　                  
 --------------------------------------------------------
-| id            | INT           | 主キー(AUTO_INCREMENT) 
-| name_sei      | VARCHAR(50)   | 姓                     
-| name_mei      | VARCHAR(50)   | 名                     
-| name_sei_kana | VARCHAR(50)   | 姓(カナ)               
-| name_mei_kana | VARCHAR(50)   | 名(カナ)               
-| gender        | VARCHAR(10)   | 性別 
-| email         | VARCHAR(100)  | メールアドレス 
-| mobile        | VARCHAR(20)   | 電話番号 
-| post          | VARCHAR(10)   | 郵便番号 
-| pref          | VARCHAR(20)   | 都道府県 
-| address       | VARCHAR(200)  | 住所 
-| password      | VARCHAR(255)  | パスワード 
+|　id           　| INT          　| 主キー(AUTO_INCREMENT)　　
+|　name_sei     　| VARCHAR(50)  　| 姓　　
+|　name_mei     　| VARCHAR(50)  　| 名　　
+|　name_sei_kana　| VARCHAR(50)  　| 姓(カナ)　　
+|　name_mei_kana　| VARCHAR(50)  　| 名(カナ)　　
+|　gender       　| VARCHAR(10)  　| 性別　　
+|　email        　| VARCHAR(100) 　| メールアドレス　　
+|　mobile       　| VARCHAR(20)  　| 電話番号　　
+|　post         　| VARCHAR(10)  　| 郵便番号　　
+|　pref         　| VARCHAR(20)  　| 都道府県　　
+|　address      　| VARCHAR(200) 　| 住所　　
+|　password     　| VARCHAR(255) 　| パスワード　　
 
 ---
 
