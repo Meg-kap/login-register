@@ -34,22 +34,27 @@ Java / JSP / Servlet / SQL を用いて開発した Web アプリケーション
 
 ## 📂 ディレクトリ構成（例）
 ```
-project/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── servlet/
-│   │   │   │   ├── LoginServlet.java
-│   │   │   │   ├── RegisterServlet.java
-│   │   │   │   └── ListServlet.java
-│   │   │   └── dao/
-│   │   │       └── UserDAO.java
-│   │   ├── webapp/
-│   │   │   ├── WEB-INF/web.xml
-│   │   │   ├── jsp/login.jsp
-│   │   │   ├── jsp/register.jsp
-│   │   │   └── css/style.css
-│   └── test/
+login-register/
+├── src/main
+│    ├── java/
+│    │   ├── model/
+│    │   │   ├── LoginLogic.java
+│    │   │   ├── RegisterUserLogic.java
+│    │   │   └── User.java
+│    │   └── servlet/
+│    │       ├── Login.java
+│    │       └── RegisterUser.java
+│    ├── webapp/
+│    │   ├── WEB-INF
+│    │   │   ├── jsp
+│    │   │   │    ├── mypage.jsp
+│    │   │   │    ├── registerConfirm.jsp
+│    │   │   │    ├── registerDone.jsp
+│    │   │   │    └── registerForm.jsp
+│    │   │   └── lib
+│    │   │        └── h2-2.3.232.jar
+│    │   ├── css/style.css
+│    │   └── index.jsp
 └── README.md
 ```
 
