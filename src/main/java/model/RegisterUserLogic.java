@@ -4,21 +4,21 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
+import util.PasswordUtil;
+
 public class RegisterUserLogic {
     public boolean excute(User user) {
         Connection conn = null;
         try {
             Class.forName("org.h2.Driver");
-
             String url = "jdbc:h2:tcp://localhost/~/desktop/H2/ec";
             String userName = "sa";
             String password = "";
-
             conn = DriverManager.getConnection(url, userName, password);
 
             String sql = "INSERT INTO ec_users (" 
-                    + "NAME_SEI, NAME_MEI, NAME_SEI_KANA, NAME_MEI_KANA, "
-                    + "GENDER, EMAIL, MOBILE, POST, PREF, ADDRESS, PASSWORD"
+                    + "name_sei, name_mei, name_sei_kana, name_mei_kana, "
+                    + "gender, email, mobile, post, pref, address, password"
                     + ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -33,17 +33,17 @@ public class RegisterUserLogic {
             pstmt.setString(8, user.getPost());
             pstmt.setString(9, user.getPref());
             pstmt.setString(10, user.getAddress());
-            pstmt.setString(11, user.getPassword());
+
+            // ★パスワードをハッシュ化して保存
+            String hashedPass = PasswordUtil.hash(user.getPassword());
+            pstmt.setString(11, hashedPass);
 
             int result = pstmt.executeUpdate();
-            System.out.println("Insert result = " + result);
-
             return result == 1;
 
         } catch (Exception e) {
             e.printStackTrace();
             return false;
-
         } finally {
             try { if (conn != null) conn.close(); } catch (Exception e) {}
         }
