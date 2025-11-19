@@ -41,12 +41,16 @@ login-register/
 │    │   │   ├── LoginLogic.java
 │    │   │   ├── RegisterUserLogic.java
 │    │   │   └── User.java
-│    │   └── servlet/
-│    │       ├── Login.java
-│    │       └── RegisterUser.java
+│    │   ├── servlet/
+│    │   │   ├── EditUser.java
+│    │   │   ├── Login.java
+│    │   │   ├── RegisterUser.java
+│    │   │   └── UpdateUser.java
+│    │   └── util/PasswordUtil.java
 │    └── webapp/
 │        ├── WEB-INF
 │        │   ├── jsp
+│        │   │    ├── editUser.jsp
 │        │   │    ├── mypage.jsp
 │        │   │    ├── registerConfirm.jsp
 │        │   │    ├── registerDone.jsp
