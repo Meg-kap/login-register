@@ -34,12 +34,23 @@ form {
   font-weight: bold;
 }
 
+/* 入力欄の統一 */
 .form-row input,
 .form-row select {
   flex: 1;
   padding: 6px 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #fff; /* 背景色を白に統一 */
+  font-size: 14px;
+  outline: none; /* フォーカス時のデフォルト青枠を消す */
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102,175,233,.5);
+  background-color: #fff; /* 水色にならないように固定 */
 }
 
 .form-row input[type="password"] {
@@ -132,7 +143,6 @@ form {
   margin-top: 30px;
   text-align: center;
 }
-
 
 /* レスポンシブ対応 */
 @media screen and (max-width: 600px) {

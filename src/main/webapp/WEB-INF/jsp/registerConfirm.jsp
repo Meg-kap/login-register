@@ -37,10 +37,22 @@ User registerUser = (User) session.getAttribute("registerUser");
 		<span class="label">メール：</span>
 		<span class="value"><%= registerUser.getEmail() %></span>
 	</div>
-
+	
 	<div class="confirm-row">
 		<span class="label">電話番号：</span>
-		<span class="value"><%= registerUser.getMobile() %></span>
+		<span class="value">
+			<%
+			String mobile = registerUser.getMobile();
+			String formattedMobile = mobile;
+			
+				if (mobile != null && mobile.length() == 11) {
+					formattedMobile = mobile.substring(0, 3) + "-" +
+									  mobile.substring(3, 7) + "-" +
+									  mobile.substring(7);
+				}
+			%>
+			<%= formattedMobile %>
+		</span>
 	</div>
 
 	<div class="confirm-row">

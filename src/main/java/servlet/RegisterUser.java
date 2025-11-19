@@ -17,7 +17,7 @@ import model.User;
 @WebServlet("/RegisterUser")
 public class RegisterUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 				//フォワード先
@@ -64,7 +64,10 @@ public class RegisterUser extends HttpServlet {
 	    String nameMeiKana = request.getParameter("name_mei_kana");
 	    String gender = request.getParameter("gender");
 	    String email = request.getParameter("email");
-	    String mobile = request.getParameter("mobile");
+	    String mobile1 = request.getParameter("mobile1"); //電話番号①
+	    String mobile2 = request.getParameter("mobile2"); //電話番号②
+	    String mobile3 = request.getParameter("mobile3"); //電話番号③
+	    String mobile = mobile1 + mobile2 + mobile3; //①+②+③
 	    String post = request.getParameter("post");
 	    String pref = request.getParameter("pref");
 	    String address = request.getParameter("address");
@@ -75,6 +78,8 @@ public class RegisterUser extends HttpServlet {
 	        nameSei, nameMei, nameSeiKana, nameMeiKana,
 	        gender, email, mobile, post, pref, address, password
 	    );
+	    
+	    registerUser.setMobile(mobile);
 
 	    // セッションスコープに保存
 	    HttpSession session = request.getSession();

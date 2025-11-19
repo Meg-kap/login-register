@@ -13,55 +13,58 @@
 
 <form action="RegisterUser" method="post">
 	<div class="form-row">
-		<label>姓：</label>
+		<label>姓</label>
 		<input type="text" name="name_sei" required>
-		<label>名：</label>
+		<label>名</label>
 		<input type="text" name="name_mei" required>
 	</div>
 
 	<div class="form-row">
-		<label>姓(カナ)：</label>
+		<label>姓(カナ)</label>
 		<input type="text" name="name_sei_kana" required>
-		<label>名(カナ)：</label>
+		<label>名(カナ)</label>
 		<input type="text" name="name_mei_kana" required>
 	</div>
 
 	<div class="form-row">
-		<label>性別：</label>
+		<label>性別</label>
 		<select name="gender" required>
 			<option value="男性">男性</option>
 			<option value="女性">女性</option>
 			<option value="未回答">未回答</option>
 		</select>
-	</div>
 
 	<div class="form-row">
-		<label>メール：</label>
+		<label>メール</label>
 		<input type="email" name="email" required>
 	</div>
 
-	<div class="form-row">
-		<label>電話番号：</label>
-		<input type="tel" name="mobile">
+	</div>	<div class="form-row">
+		<label>電話番号</label>
+		<input type="text" name="mobile1" maxlength="3" style="width:60px;">
+		-
+		<input type="text" name="mobile2" maxlength="4" style="width:70px;">
+		-
+		<input type="text" name="mobile3" maxlength="4" style="width:70px;">
 	</div>
 
 	<div class="form-row">
-		<label>郵便番号：</label>
+		<label>郵便番号</label>
 		<input type="text" name="post">
 	</div>
 
 	<div class="form-row">
-		<label>都道府県：</label>
+		<label>都道府県</label>
 		<input type="text" name="pref">
 	</div>
 
 	<div class="form-row">
-		<label>住所：</label>
+		<label>住所</label>
 		<input type="text" name="address">
 	</div>
 
 	<div class="form-row">
-		<label>パスワード：</label>
+		<label>パスワード</label>
 		<input type="password" name="password" required>
 	</div>
 
@@ -70,5 +73,9 @@
 	</div>
 </form>
 
+	<div class="form-actions">
+		<a class="btn" href="index.jsp">戻る</a>
+	</div>
+	
 </body>
 </html>

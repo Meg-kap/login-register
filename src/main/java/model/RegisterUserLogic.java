@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 
 import util.PasswordUtil;
 
+//新規ユーザー登録
 public class RegisterUserLogic {
     public boolean excute(User user) {
         Connection conn = null;
@@ -48,4 +49,32 @@ public class RegisterUserLogic {
             try { if (conn != null) conn.close(); } catch (Exception e) {}
         }
     }
+    
+    //ユーザー情報の更新
+    public boolean update(User user) {
+        String url = "jdbc:h2:tcp://localhost/~/desktop/H2/ec";
+        String userName = "sa";
+        String password = "";
+
+        try (Connection conn = DriverManager.getConnection(url, userName, password)) {
+        	String sql = "UPDATE ec_users SET name_sei=?, name_mei=?, name_sei_kana=?, name_mei_kana=?, email=?, mobile=?, pref=?, address=? WHERE email=?";
+        	PreparedStatement pstmt = conn.prepareStatement(sql);
+        	pstmt.setString(1, user.getNameSei());
+        	pstmt.setString(2, user.getNameMei());
+        	pstmt.setString(3, user.getNameSeiKana());
+        	pstmt.setString(4, user.getNameMeiKana());
+        	pstmt.setString(5, user.getEmail());
+        	pstmt.setString(6, user.getMobile());
+        	pstmt.setString(7, user.getPref());
+        	pstmt.setString(8, user.getAddress());
+        	pstmt.setString(9, user.getEmail());
+
+
+            return pstmt.executeUpdate() == 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
