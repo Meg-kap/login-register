@@ -57,17 +57,19 @@ public class RegisterUserLogic {
         String password = "";
 
         try (Connection conn = DriverManager.getConnection(url, userName, password)) {
-        	String sql = "UPDATE ec_users SET name_sei=?, name_mei=?, name_sei_kana=?, name_mei_kana=?, email=?, mobile=?, pref=?, address=? WHERE email=?";
+        	String sql = "UPDATE ec_users SET name_sei=?, name_mei=?, name_sei_kana=?, name_mei_kana=?, gender=?, email=?, mobile=?, post=?, pref=?, address=? WHERE email=?";
         	PreparedStatement pstmt = conn.prepareStatement(sql);
         	pstmt.setString(1, user.getNameSei());
         	pstmt.setString(2, user.getNameMei());
         	pstmt.setString(3, user.getNameSeiKana());
         	pstmt.setString(4, user.getNameMeiKana());
-        	pstmt.setString(5, user.getEmail());
-        	pstmt.setString(6, user.getMobile());
-        	pstmt.setString(7, user.getPref());
-        	pstmt.setString(8, user.getAddress());
-        	pstmt.setString(9, user.getEmail());
+        	pstmt.setString(5, user.getGender());
+        	pstmt.setString(6, user.getEmail());
+        	pstmt.setString(7, user.getMobile());
+        	pstmt.setString(8, user.getPost());
+        	pstmt.setString(9, user.getPref());
+        	pstmt.setString(10, user.getAddress());
+        	pstmt.setString(11, user.getEmail());
 
 
             return pstmt.executeUpdate() == 1;

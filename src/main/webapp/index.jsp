@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+<main>
 <div class="form-container">
 	<h1 class="form-title">ログイン</h1>
 	<form action="Login" method="post" class="form-wrap">
@@ -38,6 +38,6 @@
 	</div>
 
 </div>
-
+</main>
 </body>
 </html>

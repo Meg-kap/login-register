@@ -12,7 +12,7 @@ User registerUser = (User) session.getAttribute("registerUser");
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-
+<main>
 <h1>ユーザー登録確認</h1>
 
 <div class="confirm-card">
@@ -70,6 +70,6 @@ User registerUser = (User) session.getAttribute("registerUser");
 		<a class="btn btn-submit" href="RegisterUser?action=done">登録</a>
 	</div>
 </div>
-
+</main>
 </body>
 </html>

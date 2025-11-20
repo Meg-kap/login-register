@@ -14,10 +14,13 @@ import model.User;
 
 @WebServlet("/EditUser")
 public class EditUser extends HttpServlet {
+	
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+    	
         HttpSession session = request.getSession();
         User loginUser = (User) session.getAttribute("loginUser");
+        
         if (loginUser == null) {
             response.sendRedirect("index.jsp"); // ログインしてない場合
             return;

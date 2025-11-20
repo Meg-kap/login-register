@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+<main>
 <h1>マイページ</h1>
 
 <p>ようこそ、<%= loginUser.getNameSei() + " " + loginUser.getNameMei() %> さん</p>
@@ -23,6 +24,7 @@
 	<a class="btn" href="index.jsp">戻る</a>
 </div>
 
+</main>
 </body>
 </html>
 

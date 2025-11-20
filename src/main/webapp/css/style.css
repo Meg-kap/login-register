@@ -1,16 +1,31 @@
 /* 全体のベース */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  padding: 20px;
+  background-color: #f2f2f2; /* ページ全体の背景色（左右の柱部分） */
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* main を横方向中央に配置 */
 }
+
+main {
+  background-color: #fff; /* main の背景色 */
+  width: 60%;             /* 横幅 */
+  max-width: 1200px;      /* 任意で最大幅を設定 */
+  min-width: 600px;       /* 任意で最小幅を設定 */
+  margin: 20px 0;         /* 上下の余白 */
+  padding: 30px;          /* main 内部の余白 */
+}
+
 
 h1 {
   color: #333;
   text-align: center;
 }
 
+p {
+	text-align: center;
+}
 /* フォーム共通 */
 form {
   background-color: #fff;
@@ -18,7 +33,7 @@ form {
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 /* フォーム行の横並び */
@@ -30,7 +45,7 @@ form {
 }
 
 .form-row label {
-  width: 120px;
+  width: 80px;
   font-weight: bold;
 }
 

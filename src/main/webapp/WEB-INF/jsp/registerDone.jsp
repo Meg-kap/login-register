@@ -7,6 +7,8 @@
 <title>ユーザー登録</title>
 </head>
 <body>
+<main>
 <p>登録完了しました</p><a href="index.jsp">戻る</a>
+</main>
 </body>
 </html>

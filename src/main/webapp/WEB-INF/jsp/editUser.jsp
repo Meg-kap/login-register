@@ -11,13 +11,8 @@ User editUser = (User) session.getAttribute("loginUser");
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-
+<main>
 <h1>登録情報編集</h1>
-
-<% String updateMsg = (String) request.getAttribute("updateMsg"); %>
-<% if (updateMsg != null) { %>
-    <p style="color:red; font-weight:bold;"><%= updateMsg %></p>
-<% } %>
 
 <form action="UpdateUser" method="post">
 	<div class="form-row">
@@ -56,24 +51,53 @@ User editUser = (User) session.getAttribute("loginUser");
 
 	<div class="form-row">
 		<label>郵便番号</label>
-		<input type="text" name="post" value="<%= editUser.getPost() %>">
+		<input type="text" id="post" name="post" value="<%= editUser.getPost() %>" maxlength="7">
 	</div>
 
 	<div class="form-row">
 		<label>都道府県</label>
-		<input type="text" name="pref" value="<%= editUser.getPref() %>">
+		<input type="text" id="pref" name="pref" value="<%= editUser.getPref() %>">
 	</div>
 
 	<div class="form-row">
 		<label>住所</label>
-		<input type="text" name="address" value="<%= editUser.getAddress() %>">
+		<input type="text" id="address" name="address" value="<%= editUser.getAddress() %>">
 	</div>
 
   <div class="form-actions">
     <input type="submit" value="更新">
     <a class="btn" href="mypage.jsp">戻る</a>
   </div>
+  <br>
 </form>
 
+<% String updateMsg = (String) request.getAttribute("updateMsg"); %>
+<% if (updateMsg != null) { %>
+    <p style="color:red; font-weight:bold;"><%= updateMsg %></p>
+<% } %>
+
+</main>
 </body>
+
+<script>
+document.getElementById("post").addEventListener("keyup", function() {
+	const zipcode = this.value.replace(/[^0-9]/g, ""); // 数字以外除外
+
+	if (zipcode.length === 7) {
+		fetch("https://zipcloud.ibsnet.co.jp/api/search?zipcode=" + zipcode)
+			.then(response => response.json())
+			.then(data => {
+				if (data.results) {
+					const result = data.results[0];
+					document.getElementById("pref").value = result.address1;
+					document.getElementById("address").value = result.address2 + result.address3;
+				} else {
+					alert("該当する住所が見つかりません");
+				}
+			})
+			.catch(err => console.log(err));
+	}
+});
+</script>
+
 </html>
