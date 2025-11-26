@@ -44,6 +44,8 @@ login-register/
 │    │   ├── servlet/
 │    │   │   ├── EditUser.java
 │    │   │   ├── Login.java
+│    │   │   ├── Logout.java
+│    │   │   ├── Mypage.java
 │    │   │   ├── RegisterUser.java
 │    │   │   └── UpdateUser.java
 │    │   └── util/PasswordUtil.java
