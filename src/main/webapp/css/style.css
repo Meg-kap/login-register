@@ -1,22 +1,57 @@
-/* 全体のベース */
+/* ページ全体の背景（左右の柱） */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2; /* ページ全体の背景色（左右の柱部分） */
+  background-color: #f2f2f2;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center; /* main を横方向中央に配置 */
 }
 
+/* ヘッダー・フッターは横幅100% */
+header, footer {
+  width: 100%;
+  background-color: #aaa;
+  color: #fff;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* 左右に分ける */
+    align-items: center;            /* 縦方向中央 */
+    box-sizing: border-box;         /* パディング込みで幅を計算 */
+	margin-bottom: 70px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+	margin-top: 70px;
+}
+
+/* main を中央に白背景で表示 */
 main {
-  background-color: #fff; /* main の背景色 */
-  width: 60%;             /* 横幅 */
-  max-width: 1200px;      /* 任意で最大幅を設定 */
-  min-width: 600px;       /* 任意で最小幅を設定 */
-  margin: 20px 0;         /* 上下の余白 */
-  padding: 30px;          /* main 内部の余白 */
+  background-color: #fff;
+  width: 60%;          /* 中央カラムの幅 */
+  max-width: 1200px;   /* 最大幅 */
+  min-width: 600px;    /* 最小幅 */
+  margin: 20px auto;   /* 上下マージン + 横中央 */
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* optional: 立体感 */
 }
-
 
 h1 {
   color: #333;

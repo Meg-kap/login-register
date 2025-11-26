@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+<%@ include file="common/header.jsp" %>
 <main>
 <h1>マイページ</h1>
 
@@ -25,6 +26,7 @@
 </div>
 
 </main>
+<%@ include file="common/footer.jsp" %>
 </body>
 </html>
 

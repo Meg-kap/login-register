@@ -12,6 +12,7 @@ User registerUser = (User) session.getAttribute("registerUser");
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+<%@ include file="common/header.jsp" %>
 <main>
 <h1>ユーザー登録確認</h1>
 
@@ -71,5 +72,6 @@ User registerUser = (User) session.getAttribute("registerUser");
 	</div>
 </div>
 </main>
+<%@ include file="common/footer.jsp" %>
 </body>
 </html>

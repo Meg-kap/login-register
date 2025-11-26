@@ -8,6 +8,8 @@
 </head>
 
 <body>
+<%@ include file="WEB-INF/jsp/common/header.jsp" %>
+
 <main>
 <div class="form-container">
 	<h1 class="form-title">ログイン</h1>
@@ -39,5 +41,6 @@
 
 </div>
 </main>
+<%@ include file="WEB-INF/jsp/common/footer.jsp" %>
 </body>
 </html>

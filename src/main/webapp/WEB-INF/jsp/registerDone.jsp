@@ -7,8 +7,10 @@
 <title>ユーザー登録</title>
 </head>
 <body>
+<%@ include file="common/header.jsp" %>
 <main>
 <p>登録完了しました</p><a href="index.jsp">戻る</a>
 </main>
+<%@ include file="common/footer.jsp" %>
 </body>
 </html>

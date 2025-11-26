@@ -11,6 +11,7 @@ User editUser = (User) session.getAttribute("loginUser");
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+<%@ include file="common/header.jsp" %>
 <main>
 <h1>登録情報編集</h1>
 
@@ -64,11 +65,11 @@ User editUser = (User) session.getAttribute("loginUser");
 		<input type="text" id="address" name="address" value="<%= editUser.getAddress() %>">
 	</div>
 
-  <div class="form-actions">
-    <input type="submit" value="更新">
-    <a class="btn" href="mypage.jsp">戻る</a>
-  </div>
-  <br>
+	 <div class="form-actions">
+		<input type="submit" value="更新">
+		<a class="btn" href="mypage.jsp">戻る</a>
+	 </div>
+ <br>
 </form>
 
 <% String updateMsg = (String) request.getAttribute("updateMsg"); %>
@@ -77,6 +78,7 @@ User editUser = (User) session.getAttribute("loginUser");
 <% } %>
 
 </main>
+<%@ include file="common/footer.jsp" %>
 </body>
 
 <script>
