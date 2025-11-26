@@ -32,7 +32,7 @@ Java / JSP / Servlet / SQL を用いて開発した Web アプリケーション
 
 ---
 
-## 📂 ディレクトリ構成（例）
+## 📂 ディレクトリ構成
 ```
 login-register/
 ├── src/main
@@ -50,6 +50,9 @@ login-register/
 │    └── webapp/
 │        ├── WEB-INF
 │        │   ├── jsp
+│        │   │    ├── common
+│        │   │    │   ├── header.jsp
+│        │   │    │   └── footer.jsp
 │        │   │    ├── editUser.jsp
 │        │   │    ├── mypage.jsp
 │        │   │    ├── registerConfirm.jsp
@@ -65,11 +68,6 @@ login-register/
 ---
 
 ## 🗄 データベース構成
-### 📘 ER図
-> 画像を `docs/er_diagram.png` に差し替えてください。  
-> 例：  
-> ![ER図](./docs/er_diagram.png)
-
 ### テーブル定義例：ec_users
 | カラム名         | 型            | 説明                  |
 |-----------------|---------------|----------------------|
@@ -95,7 +93,7 @@ login-register/
 - SQLインジェクション対策として **PreparedStatement** を使用
 - パスワードは **ハッシュ化（SHA-256 / bcrypt）** して保存
 - JSP include によるヘッダー・フッターの共通化
-- ER図・シーケンス図を用いて処理を明確化
+- シーケンス図を用いて処理を明確化
 
 ---
 
@@ -145,15 +143,15 @@ login-register/
 ---
 
 ## 👤 作成者
-- **氏名（またはGitHubアカウント）**：Your Name  
-- **開発期間**：2025年○月〜○月  
+- **氏名（またはGitHubアカウント）**：Meg-cap
+- **開発期間**：2025年11月〜
 - **連絡先**：your-email@example.com  
 - **GitHub**：https://github.com/yourname/java-webapp-portfolio
 
 ---
 
 ## ✅ 最終更新日
-2025-11-11
+2025-11-26
 
 ---
 
