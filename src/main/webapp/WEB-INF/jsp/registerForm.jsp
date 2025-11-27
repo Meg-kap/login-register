@@ -72,12 +72,10 @@
 
 	<div class="form-actions">
 		<input type="submit" value="確認">
+		<a class="btn" href="index.jsp">戻る</a>
 	</div>
 </form>
 
-	<div class="form-actions">
-		<a class="btn" href="index.jsp">戻る</a>
-	</div>
 
 </main>	
 <%@ include file="common/footer.jsp" %>

@@ -67,7 +67,7 @@ User editUser = (User) session.getAttribute("loginUser");
 
 	 <div class="form-actions">
 		<input type="submit" value="更新">
-		<a class="btn" href="mypage.jsp">戻る</a>
+		<a class="btn" href="<%= request.getContextPath() %>/index.jsp">戻る</a>
 	 </div>
  <br>
 </form>

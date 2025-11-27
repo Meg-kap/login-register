@@ -25,7 +25,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 1.8rem;
 }
 
 header nav a {
@@ -45,7 +45,7 @@ footer {
 /* main を中央に白背景で表示 */
 main {
   background-color: #fff;
-  width: 60%;          /* 中央カラムの幅 */
+  width: 70%;          /* 中央カラムの幅 */
   max-width: 1200px;   /* 最大幅 */
   min-width: 600px;    /* 最小幅 */
   margin: 20px auto;   /* 上下マージン + 横中央 */
@@ -54,8 +54,13 @@ main {
 }
 
 h1 {
-  color: #333;
-  text-align: center;
+	color: #333;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 1.3rem;
 }
 
 p {
@@ -63,135 +68,135 @@ p {
 }
 /* フォーム共通 */
 form {
-  background-color: #fff;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	background-color: #fff;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 /* フォーム行の横並び */
 .form-row {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* ラベルと入力欄の間隔 */
-  margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+	gap: 10px; /* ラベルと入力欄の間隔 */
+	margin-bottom: 15px;
 }
 
 .form-row label {
-  width: 80px;
-  font-weight: bold;
+	width: 80px;
+	font-weight: bold;
 }
 
 /* 入力欄の統一 */
 .form-row input,
 .form-row select {
-  flex: 1;
-  padding: 6px 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff; /* 背景色を白に統一 */
-  font-size: 14px;
-  outline: none; /* フォーカス時のデフォルト青枠を消す */
+	flex: 1;
+	padding: 6px 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff; /* 背景色を白に統一 */
+	font-size: 14px;
+	outline: none; /* フォーカス時のデフォルト青枠を消す */
 }
 
 .form-row input:focus,
 .form-row select:focus {
-  border-color: #66afe9;
-  box-shadow: 0 0 5px rgba(102,175,233,.5);
-  background-color: #fff; /* 水色にならないように固定 */
+	border-color: #66afe9;
+	box-shadow: 0 0 5px rgba(102,175,233,.5);
+	background-color: #fff; /* 水色にならないように固定 */
 }
 
 .form-row input[type="password"] {
-  font-family: sans-serif;
+	font-family: sans-serif;
 }
 
 /* 確認ページカード */
 .confirm-card {
-  background-color: #fff;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	background-color: #fff;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* 確認ページのラベルと値 */
 .confirm-row {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
 }
 
 .confirm-row .label {
-  width: 120px;
-  font-weight: bold;
+	width: 120px;
+	font-weight: bold;
 }
 
 .confirm-row .value {
-  flex: 1;
+	flex: 1;
 }
 
 /* ボタン共通 */
 .form-actions {
-  text-align: center;
-  margin-top: 20px;
+	text-align: center;
+	margin-top: 20px;
 }
 
 .form-actions input,
 .form-actions a.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
 }
 
 /* フォーム送信用ボタン */
 .form-actions input {
-  background-color: #0077cc;
-  border: none;
-  color: #fff;
+	background-color: #0077cc;
+	border: none;
+	color: #fff;
 }
 
 .form-actions input:hover {
-  background-color: #005fa3;
+	background-color: #005fa3;
 }
 
 /* 確認ページボタン（戻る用） */
 .form-actions a.btn {
-  background-color: #ccc;
-  color: #fff;
+	background-color: #ccc;
+	color: #fff;
 }
 
 .form-actions a.btn:hover {
-  background-color: #999;
+	background-color: #999;
 }
 
 /* 確認ページ登録用ボタン */
 .form-actions a.btn-submit {
-  background-color: #0077cc;
-  color: #fff;
+	background-color: #0077cc;
+	color: #fff;
 }
 
 .form-actions a.btn-submit:hover {
-  background-color: #005fa3;
+	background-color: #005fa3;
 }
 
 /* エラーメッセージ */
 .error-msg {
-  color: #e63946;
-  margin-top: 10px;
-  font-size: 14px;
+	color: #e63946;
+	margin-top: 10px;
+	font-size: 14px;
 }
 
 /* 追加リンクスタイル */
 .additional-links {
-  margin-top: 30px;
-  text-align: center;
+	margin-top: 30px;
+	text-align: center;
 }
 
 /* レスポンシブ対応 */

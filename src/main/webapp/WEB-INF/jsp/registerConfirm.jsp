@@ -67,8 +67,8 @@ User registerUser = (User) session.getAttribute("registerUser");
 	</div>
 
 	<div class="form-actions">
-		<a class="btn" href="index.jsp">戻る</a>
 		<a class="btn btn-submit" href="RegisterUser?action=done">登録</a>
+		<a class="btn" href="index.jsp">戻る</a>
 	</div>
 </div>
 </main>

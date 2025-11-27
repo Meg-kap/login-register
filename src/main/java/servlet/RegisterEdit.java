@@ -22,7 +22,7 @@ public class RegisterEdit extends HttpServlet {
 		User loginUser = (User) session.getAttribute("loginUser");
 		
 		if (loginUser == null) {
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("login.jsp");
 			return;
 		}
 		

@@ -11,13 +11,13 @@ import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/Logout")
 public class Logout extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-        
-        HttpSession session = request.getSession(false);
-        if (session != null) {
-            session.invalidate(); // セッション破棄
-        }
-        response.sendRedirect("index.jsp"); // ログアウト後はトップへ
-    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	throws ServletException, IOException {
+		
+		HttpSession session = request.getSession(false);
+		if (session != null) {
+			session.invalidate(); // セッション破棄
+		}
+		response.sendRedirect("login.jsp"); // ログアウト後はログイン画面へ
+	}
 }

@@ -18,11 +18,11 @@
 <p>ようこそ、<%= loginUser.getNameSei() + " " + loginUser.getNameMei() %> さん</p>
 
 <div class="form-actions">
-    <a class="btn" href="EditUser">登録情報の確認・編集</a>
+	<a class="btn" href="EditUser">登録情報の確認・編集</a>
 </div>
 
 <div class="form-actions">
-	<a class="btn" href="index.jsp">戻る</a>
+	<a class="btn" href="<%= request.getContextPath() %>/index.jsp">戻る</a>
 </div>
 
 </main>

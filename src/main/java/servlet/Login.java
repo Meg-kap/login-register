@@ -34,7 +34,7 @@ public class Login extends HttpServlet {
     } else {
       // ログイン失敗 → エラーメッセージ表示
       request.setAttribute("errorMsg", "ログインIDまたはパスワードが違います");
-      RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+      RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
       dispatcher.forward(request, response);
     }
   }
